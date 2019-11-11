@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <FrameLayout android:layout_width="300dp"
+                 android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/layer_bg_transparent_white"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <com.fanwe.xianrou.widget.QKDiamondTextView
+                android:id="@+id/tv_gain"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:drawableLeft="@drawable/ic_diamond"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="0$"
+                android:textColor="@color/res_main_color"
+                android:textSize="15sp"
+                android:layout_marginTop="110dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:id="@+id/ll_gift"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="打赏之后运气更佳！"
+                    android:textColor="@color/res_text_gray_m"
+                    android:textSize="15sp"/>
+
+                <com.fanwe.library.customview.SDGridLinearLayout
+                    android:id="@+id/gll_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_send_gift"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/res_layer_main_color_corner_l"
+                    android:gravity="center"
+                    android:text="打赏"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_game_close_dialog"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_winner_img"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:src="@drawable/ic_game_win"/>
+
+    </FrameLayout>
+
+</LinearLayout>

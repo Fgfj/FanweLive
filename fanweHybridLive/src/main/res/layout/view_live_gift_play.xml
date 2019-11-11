@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:background="@drawable/res_layer_blur_m_corner_l"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="2dp">
+
+        <com.fanwe.library.view.CircleImageView
+            android:id="@+id/iv_head_image"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:src="@drawable/icon"
+            app:civ_border_color="@color/res_main_color"
+            app:civ_border_width="0dp"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                style="@style/res.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="6dp"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/res.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_gift"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gift_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.fanwe.live.view.SDOutLineTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:textColor="@color/res_second_color"
+            android:textSize="20sp"
+            android:typeface="monospace"
+            app:outlineColor="@color/white"
+            app:outlineSize="3sp"/>
+
+        <com.fanwe.live.view.SDOutLineTextView
+            android:id="@+id/tv_gift_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/res_second_color"
+            android:textSize="20sp"
+            android:typeface="monospace"
+            app:outlineColor="@color/white"
+            app:outlineSize="3sp"/>
+    </LinearLayout>
+
+</LinearLayout>

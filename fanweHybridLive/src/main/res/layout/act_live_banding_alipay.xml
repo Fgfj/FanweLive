@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/res_bg_activity"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <com.fanwe.library.customview.ClearEditText
+            android:id="@+id/et_alipay_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_activity_topic_white_corner"
+            android:hint="请输入支付宝账号"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/res_text_gray_m"
+            android:textSize="16sp"/>
+
+        <com.fanwe.library.customview.ClearEditText
+            android:id="@+id/et_alipay_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_alipay_account"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_edittext_activity_topic_white_corner"
+            android:hint="请输入支付宝名称"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/res_text_gray_m"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_do_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_main_color_to_main_color_press_50dp_corner"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</LinearLayout>

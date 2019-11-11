@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/res_sel_white_gray"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:id="@+id/ll_root">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.fanwe.library.view.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/civ_head_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon"
+            app:civ_border_color="@color/res_second_color"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/tv_show_live"
+            android:layout_width="45dp"
+            android:layout_height="15dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#91C802"
+            android:text="直播中"
+            android:textColor="@color/white"
+            android:textSize="11sp"/>
+
+    </FrameLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            style="@style/text_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中"
+            android:maxEms="6"
+            android:textColor="@color/res_text_gray_l"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/iv_global_male"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_global_male"/>
+
+        <ImageView
+            android:id="@+id/iv_rank"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/rank_1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_watch_live"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_deep_gree_rectangle_radius"
+        android:text="观看直播"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/txv_refuse"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_deep_orange_rectangle_radius"
+        android:text="拒绝"
+        android:textColor="@color/res_main_color"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/txv_agree"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_deep_black_rectangle_radius"
+        android:text="同意"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="visible"/>
+
+</LinearLayout>

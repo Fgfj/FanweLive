@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_live_pop_msg_handle_selected" android:state_selected="true"/>
+    <item android:drawable="@drawable/bg_live_pop_msg_handle_normal"/>
+
+</selector>

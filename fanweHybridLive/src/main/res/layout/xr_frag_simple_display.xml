@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scottsu.stateslayout.StatesLayout
+    android:id="@+id/states_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:sl_default_loading_wheel_color="@color/res_main_color">
+
+    <com.fanwe.lib.pulltorefresh.SDPullToRefreshView
+        android:id="@id/view_pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.fanwe.library.view.SDRecyclerView
+            android:id="@+id/view_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.fanwe.lib.pulltorefresh.SDPullToRefreshView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <include
+            android:id="@+id/layout_state_footer_xr_frag_simple_display"
+            layout="@layout/xr_layout_state_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</com.scottsu.stateslayout.StatesLayout>

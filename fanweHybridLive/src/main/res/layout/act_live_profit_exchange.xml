@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/res_bg_activity"
+              android:orientation="vertical"
+              android:paddingTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_useable_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/res_sel_white_gray"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户余额："
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_useable_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中"
+            android:textColor="@color/res_main_color"
+            android:textSize="16sp"/>
+        <com.fanwe.live.view.LiveStringTicketTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:textColor="@color/res_main_color"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="兑换"
+        android:textColor="@color/res_main_color"
+        android:textSize="14sp"/>
+
+    <ListView
+        android:id="@+id/lv_exchange_rule"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tv_exchange_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="兑换比例：0.000(兑换结果取整去零)"
+        android:textColor="@color/res_text_gray_m"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_other_ticket_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/res_layer_white_strokeb"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            style="@style/res.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他金额："
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/res_layer_white_stroke_corner"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_money"
+                style="@style/res.Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:inputType="number"
+                android:maxLength="9"
+                android:text=""
+                android:textSize="14sp"/>
+            <com.fanwe.live.view.LiveStringTicketTextView
+                android:id="@+id/tv_unit_and_equals"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:gravity="center_vertical"
+                android:text=" ="
+                android:textSize="14sp"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/tv_money_to_diamonds"
+                style="@style/res.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="0"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_diamond"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_do_exchange"
+            style="@style/res.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/selector_transparent_stroke_main_color_5dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:minHeight="30dp"
+            android:minWidth="50dp"
+            android:text="兑换"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_SDTab"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_title_bar"
+    android:layout_marginTop="10dp"
+    android:weightSum="4"
+    android:orientation="horizontal">
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_live_anchor"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@color/divider_line"/>
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_live_member_list"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@color/divider_line"/>
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_live_member_apply"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@color/divider_line"/>
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_live_exit_apply"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/height_title_bar"
+        android:background="@color/white"/>
+</LinearLayout>

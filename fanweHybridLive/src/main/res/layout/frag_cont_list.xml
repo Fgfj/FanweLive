@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.fanwe.lib.statelayout.SDStateLayout
+        android:id="@id/view_state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.fanwe.lib.pulltorefresh.SDPullToRefreshView
+            android:id="@id/view_pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:listSelector="@color/transparent"/>
+
+        </com.fanwe.lib.pulltorefresh.SDPullToRefreshView>
+    </com.fanwe.lib.statelayout.SDStateLayout>
+</LinearLayout>

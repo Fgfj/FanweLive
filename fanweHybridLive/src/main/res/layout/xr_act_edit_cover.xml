@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="点击图片选择封面"
+        android:textColor="@color/res_text_gray_m"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <ImageView
+            android:id="@+id/i1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i7"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/i8"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+</LinearLayout>

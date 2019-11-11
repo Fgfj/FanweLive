@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/res_layer_blur_m_corner_l"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="6dp">
+
+            <LinearLayout
+                android:id="@+id/ll_click_creater"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- 主播头像 -->
+                <RelativeLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="1dp">
+
+                    <com.fanwe.library.view.CircleImageView
+                        android:id="@+id/iv_head_image"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="@dimen/width_live_viewer_head_image"
+                        android:layout_height="@dimen/height_live_viewer_head_image"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="0dp"/>
+
+                    <com.fanwe.library.view.CircleImageView
+                        android:id="@+id/iv_level"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/icon"/>
+                </RelativeLayout>
+
+                <!-- 直播类型、人数 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_video_title"
+                        style="@style/res.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_viewer_number"
+                        style="@style/res.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- 关注 -->
+            <LinearLayout
+                android:id="@+id/ll_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:background="@drawable/res_layer_second_color_corner_l"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="关注"
+                    android:textColor="@color/res_text_gray_l"
+                    android:textSize="11sp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_operate_viewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/view_add_viewer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="7dp"
+                android:src="@drawable/ic_live_add_viewer"/>
+
+            <ImageView
+                android:id="@+id/view_minus_viewer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="7dp"
+                android:src="@drawable/ic_live_minus_viewer"/>
+        </LinearLayout>
+
+        <com.fanwe.library.view.SDRecyclerView
+            android:id="@+id/hlv_viewer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"/>
+
+        <!-- 关闭 -->
+        <RelativeLayout
+            android:layout_width="@dimen/width_live_viewer_head_image"
+            android:layout_height="@dimen/height_live_viewer_head_image"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp">
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!-- 印票 -->
+        <LinearLayout
+            android:id="@+id/ll_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/res_layer_blur_m_corner_l"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <com.fanwe.live.view.LiveStringTicketTextView
+                style="@style/res.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : "
+                android:textColor="@color/white"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/tv_ticket"
+                style="@style/res.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="11sp"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="9dp"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/ic_arrow_right_yinpiao_check"/>
+        </LinearLayout>
+
+        <!-- 速率 -->
+        <com.fanwe.live.appview.RoomSdkInfoView
+            android:id="@+id/view_sdk_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.fanwe.live.appview.RoomSdkInfoView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.fanwe.live.view.LiveStringAccountTextView
+                    style="@style/res.Text.Shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="#7FFFFFFF"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_user_number"
+                    style="@style/res.Text.Shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7FFFFFFF"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_creater_guangbao"
+        android:layout_width="wrap_content"
+        style="@style/res.Text"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/res_layer_blur_m_corner_l"
+        android:textColor="@color/white"
+        android:text="这是一个广告哦"
+        android:textSize="11sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_creater_leave"
+        style="@style/res.Text.Shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/live_creater_leave"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+</LinearLayout>

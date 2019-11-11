@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layer_white_corner_2dp"
+    app:layout_maxHeight="397dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_recharge_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.fanwe.library.view.SDTabUnderline
+                    android:id="@+id/tab_recharge"
+                    android:layout_width="51dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_stroke_game_exchange"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="@color/res_stroke_deep" />
+
+            <LinearLayout
+                android:id="@+id/ll_tab_game_exchange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.fanwe.library.view.SDTabUnderline
+                    android:id="@+id/tab_game_exchange"
+                    android:layout_width="51dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_recharge_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_recharge_tab"
+            android:layout_marginTop="5dp"
+            android:minHeight="80dp">
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fl_recharge_container"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/fl_recharge_container"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="获取数据失败，点击重试"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_main_color_close" />
+    </LinearLayout>
+</RelativeLayout>

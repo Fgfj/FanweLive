@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:maxWidth="110dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:id="@+id/tv_nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载中..."
+        android:textColor="@color/res_text_gray_l"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_global_male"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_global_male" />
+
+    <ImageView
+        android:id="@+id/iv_rank"
+        android:layout_width="26dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/rank_1" />
+
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_head_bg"
+            android:layout_width="match_parent"
+            android:layout_height="263dp"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#44000000">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_title_bar"
+                android:background="@color/transparent">
+
+                <LinearLayout
+                    android:id="@+id/ll_left"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="10.5dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_club_detail_left_white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="公会详情"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_right"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_club_detail_join"
+                        android:layout_width="23.5dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_club_detail_join"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/iv_club_detail_exit"
+                        android:layout_width="23.5dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_club_detail_exit"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_apply_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="入会申请中"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_sociaty_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="状态：审核中"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tv_show_invitation_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:maxEms="7"
+                        android:text="加载中..."
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="218dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.fanwe.library.view.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/iv_head"
+                    android:layout_width="91.5dp"
+                    android:layout_height="91.5dp"
+                    android:src="@drawable/icon"
+                    app:civ_border_color="@color/stroke_head_image"
+                    app:civ_border_width="2dp"/>
+                <TextView
+                    android:id="@+id/tv_sociaty_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加载中..."
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_sociaty_president"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxEms="9"
+                    android:text="加载中..."
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_sociaty_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="加载中..."
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_sociaty_declaration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="10dp"
+            android:text="加载中"
+            android:textSize="11sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_load_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+            <ImageView
+                android:id="@+id/iv_load_more"
+                android:layout_width="14dp"
+                android:layout_height="7.5dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/ic_club_detail_more_down"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

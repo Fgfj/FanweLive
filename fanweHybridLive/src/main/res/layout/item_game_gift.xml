@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:id="@+id/ll_item_gift"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/selector_bg_game_gift"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_gift_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <com.fanwe.xianrou.widget.QKDiamondTextView
+            android:id="@+id/tv_gift_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_diamond"
+            android:drawablePadding="5dp"
+            android:textColor="@color/res_main_color"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="$"/>
+    </LinearLayout>
+</FrameLayout>

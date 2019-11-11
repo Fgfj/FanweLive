@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="text_nick_name" parent="res.Text">
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text_nick_name</item>
+        <item name="android:maxWidth">170dp</item>
+    </style>
+
+    <style name="text_introduce" parent="res.Text">
+        <item name="android:maxLines">2</item>
+        <item name="android:text">TA好像忘记写签名了</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/res_text_gray_m</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+</resources>

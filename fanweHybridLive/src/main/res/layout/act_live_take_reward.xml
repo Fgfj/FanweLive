@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:background="@color/res_bg_activity"
+              android:orientation="vertical"
+              android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.fanwe.live.view.LiveStringTicketTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="before总"
+                android:textColor="@color/res_text_gray_m"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_useable_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/res_main_color"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.fanwe.live.view.LiveStringTicketTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="before今日可领取"
+                android:textColor="@color/res_text_gray_m"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_total_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/res_main_color"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.fanwe.live.view.LiveStringTicketTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="before提现"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="15sp"/>
+
+        <com.fanwe.library.customview.ClearEditText
+            android:id="@+id/et_reward_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg_edittext_activity_topic_white_corner"
+            android:inputType="number"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="8dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="99元"
+        android:textColor="@color/res_text_gray_m"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_do_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_main_color_to_main_color_press_50dp_corner"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</LinearLayout>

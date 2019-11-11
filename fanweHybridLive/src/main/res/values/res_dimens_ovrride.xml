@@ -1,0 +1,8 @@
+<resources>
+
+    <!-- 标题栏文字大小 -->
+    <dimen name="res_text_title_bar">16sp</dimen>
+    <!-- 标题栏较小的文字大小 -->
+    <dimen name="res_text_sub_title_bar">14sp</dimen>
+
+</resources>

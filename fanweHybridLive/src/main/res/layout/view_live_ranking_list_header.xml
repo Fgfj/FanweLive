@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="#f8f8f8"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/tv_ranking_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_live_ranking_list_header_number"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:textColor="@color/res_text_gray_l"
+        android:textSize="13sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_live_ranking_list_header_bottom_bg">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_item_second"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.fanwe.library.view.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/civ_head_second"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="14dp"
+                        app:civ_border_color="@color/white"/>
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_live_ranking_list_header_second"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nickname_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxEms="3"
+                        android:maxLines="1"
+                        android:text="加载中..."
+                        android:textColor="@color/res_text_gray_l"
+                        android:textSize="13sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_global_male_second"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_global_male"/>
+
+                    <ImageView
+                        android:id="@+id/iv_rank_second"
+                        android:layout_width="26dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/rank_1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_ranking_type_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="贡献"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_num_other_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+
+                    <com.fanwe.live.view.LiveStringTicketTextView
+                        android:id="@+id/tv_ticket_name_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_item_first"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.fanwe.library.view.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/civ_head_first"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="26dp"
+                        app:civ_border_color="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_live_ranking_list_header_first"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nickname_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxEms="3"
+                        android:maxLines="1"
+                        android:text="加载中..."
+                        android:textColor="@color/res_text_gray_l"
+                        android:textSize="13sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_global_male_first"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_global_male"/>
+
+                    <ImageView
+                        android:id="@+id/iv_rank_first"
+                        android:layout_width="26dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/rank_1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_ranking_type_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="贡献"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_num_other_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+
+                    <com.fanwe.live.view.LiveStringTicketTextView
+                        android:id="@+id/tv_ticket_name_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_item_third"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.fanwe.library.view.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/civ_head_third"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="14dp"
+                        app:civ_border_color="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_live_ranking_list_header_third"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nickname_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxEms="3"
+                        android:maxLines="1"
+                        android:text="加载中..."
+                        android:textColor="@color/res_text_gray_l"
+                        android:textSize="13sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_global_male_third"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_global_male"/>
+
+                    <ImageView
+                        android:id="@+id/iv_rank_third"
+                        android:layout_width="26dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/rank_1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_ranking_type_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="贡献"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_num_other_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+
+                    <com.fanwe.live.view.LiveStringTicketTextView
+                        android:id="@+id/tv_ticket_name_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_user_home"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

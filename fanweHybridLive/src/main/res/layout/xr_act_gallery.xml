@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_container_xr_act_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageButton
+        android:id="@+id/imgbtn_more_xr_act_gallery"
+        android:layout_width="@dimen/height_icon_l"
+        android:layout_height="@dimen/height_icon_l"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/margin_xs"
+        android:background="@drawable/xr_selector_transparent_gray"
+        android:src="@drawable/xr_ic_more_horizontal"/>
+
+</FrameLayout>

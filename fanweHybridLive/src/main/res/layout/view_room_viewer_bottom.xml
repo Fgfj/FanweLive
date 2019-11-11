@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_live_bottom_bar"
+    android:gravity="bottom"
+    android:paddingBottom="@dimen/margin_live_bottom_menu"
+    android:paddingRight="@dimen/margin_live_bottom_menu">
+
+    <!-- 发消息 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_send_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"/>
+
+    <ImageView
+        android:id="@+id/menu_live_bottom_podcast_order"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:src="@drawable/ic_live_bottom_podcast_order"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/menu_shop_ic_my_store"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:src="@drawable/shop_ic_my_store"
+        android:visibility="gone"/>
+
+    <!-- 插件中心 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_viewer_plugin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"/>
+
+    <!-- 竞拍订单支付 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_viewer_auction_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:visibility="gone"/>
+
+    <!-- 显示隐藏底部扩展 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_bottom_extend_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:visibility="gone"/>
+
+    <!-- 申请上庄 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_apply_banker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <!-- pc直播横屏 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_full_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:visibility="gone"/>
+
+    <!-- 私聊消息 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_private_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"/>
+
+    <!-- 连麦 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_apply_link_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:visibility="gone"/>
+
+    <!-- 礼物 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_send_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"/>
+
+    <!-- 分享 -->
+    <com.fanwe.live.appview.room.RoomMenuView
+        android:id="@+id/menu_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_live_bottom_menu"
+        android:visibility="gone"/>
+</LinearLayout>

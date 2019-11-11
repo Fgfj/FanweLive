@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="@color/res_bg_title_bar"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_rank_day"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_rank_month"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:visibility="visible" />
+
+    <com.fanwe.live.view.LiveTabUnderline
+        android:id="@+id/tab_rank_total"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+</LinearLayout>

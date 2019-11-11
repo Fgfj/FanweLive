@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/res_height_button"
+              android:clipChildren="false"
+              android:clipToPadding="false"
+              android:gravity="top"
+              android:orientation="horizontal"
+              android:background="@color/white"
+              android:padding="@dimen/margin_xxs">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/base_p_m_5"
+        android:layout_weight="1"
+        android:background="@drawable/xr_shape_bg_et"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_xxs">
+
+        <LinearLayout
+            android:id="@+id/ll_reply_to_xr_frag_user_dynamic_detail_comment_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reply"
+                android:paddingRight="@dimen/base_stroke_1dp"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_caption"/>
+
+            <TextView
+                android:id="@+id/tv_name_reply_to_xr_frag_user_dynamic_detail_comment_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="范德萨"
+                android:textColor="@color/res_main_color"
+                android:textSize="@dimen/text_size_caption"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_caption"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_comment_xr_frag_user_dynamic_detail_comment_publish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/margin_xxs"
+            android:singleLine="true"
+            android:hint="@string/hint_comment_user_dynamic_detail"
+            android:maxLength="100"
+            android:textColor="@color/textColorTertiary"
+            android:textSize="@dimen/text_size_caption"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_comment_xr_frag_user_dynamic_detail_comment_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_button_s"
+        android:background="@drawable/xr_selector_color_primary_round"
+        android:text="@string/publish_comment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_caption"/>
+
+</LinearLayout>

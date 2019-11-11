@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2FFFFFF"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/qk_layout_scale_in"
+        android:orientation="horizontal">
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ll_create_live"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/qk_ic_create_live"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/base_p_m_10"
+                android:text="发起直播"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_create_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/qk_ic_create_video"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/base_p_m_10"
+                android:text="发布小视频"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <FrameLayout
+        android:id="@+id/fl_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_live_main_bottom_bar"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/ic_create_live"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/base_p_m_10"
+    android:paddingRight="@dimen/base_p_m_10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享至"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/text_size_body"/>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <FrameLayout
+        android:id="@+id/fl_button_qq_xr_frag_user_dynamic_share"
+        android:layout_width="@dimen/height_icon_xl"
+        android:layout_height="@dimen/height_icon_xl"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@drawable/xr_selector_transparent_gray"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/margin_xxs">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/height_user_head_l"
+            android:layout_height="@dimen/height_user_head_l"
+            android:id="@+id/iv_share_qq_xr_act_user_dynamic_detail_video"
+            android:background="@drawable/xr_ic_share_qq"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_button_wechat_xr_frag_user_dynamic_share"
+        android:layout_width="@dimen/height_icon_xl"
+        android:layout_height="@dimen/height_icon_xl"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@drawable/xr_selector_transparent_gray"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/margin_xxs">
+
+        <ImageView
+            android:layout_width="@dimen/height_user_head_l"
+            android:layout_height="@dimen/height_user_head_l"
+            android:layout_gravity="center"
+            android:background="@drawable/xr_ic_share_wechat"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_button_friends_xr_frag_user_dynamic_share"
+        android:layout_width="@dimen/height_icon_xl"
+        android:layout_height="@dimen/height_icon_xl"
+        android:background="@drawable/xr_selector_transparent_gray"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/margin_xxs">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/height_user_head_l"
+            android:layout_height="@dimen/height_user_head_l"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:background="@drawable/xr_ic_share_friends_circle"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_button_weibo_xr_frag_user_dynamic_share"
+        android:layout_width="@dimen/height_icon_xl"
+        android:layout_height="@dimen/height_icon_xl"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@drawable/xr_selector_transparent_gray"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/margin_xxs">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/height_user_head_l"
+            android:layout_height="@dimen/height_user_head_l"
+            android:background="@drawable/xr_ic_share_weibo"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_button_qzone_xr_frag_user_dynamic_share"
+        android:layout_width="@dimen/height_icon_xl"
+        android:layout_height="@dimen/height_icon_xl"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@drawable/xr_selector_transparent_gray"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/margin_xxs">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/height_user_head_l"
+            android:layout_height="@dimen/height_user_head_l"
+            android:background="@drawable/xr_ic_share_qzone"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+</LinearLayout>

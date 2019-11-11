@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#FBFBFB"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/include_title_simple"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <com.fanwe.library.customview.ClearEditText
+            android:id="@+id/et_edit_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_edittext_activity_topic_white_corner"
+            android:maxLength="32"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_text_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="0/0"
+            android:textColor="@color/res_text_gray_m"/>
+
+        <com.fanwe.xianrou.widget.QKDiamondTextView
+            android:id="@+id/tv_text_nick_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="提示:昵称只能免费更改一次，超过次数将收取100$"
+            android:textColor="@color/res_text_gray_m"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

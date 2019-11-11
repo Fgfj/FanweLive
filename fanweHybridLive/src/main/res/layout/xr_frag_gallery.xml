@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#212121"
+             android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.fanwe.xianrou.widget.BigPhotoViewPager
+            android:id="@+id/vp_xr_frag_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_page_number_xr_frag_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/margin_s"
+            android:background="@drawable/xr_shape_bg_round_rec_black_translucent"
+            android:paddingBottom="@dimen/margin_xxs"
+            android:paddingLeft="@dimen/margin_xs"
+            android:paddingRight="@dimen/margin_xs"
+            android:paddingTop="@dimen/margin_xxs"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body"/>
+    </FrameLayout>
+</FrameLayout>

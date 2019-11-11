@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_color_e6">#E6333333</color>
+
+    <!--插件中心 点击颜色-->
+    <color name="transparent_white_80">#80FFFFFF</color>
+    <!-- item项内容颜色 -->
+    <color name="item_remove_viewer">#cd000000</color>
+    <color name="text_color_on_blur">#888785</color>
+
+    <!-- 主页下面菜单按钮颜色 -->
+    <color name="text_home_menu_normal">@color/res_text_gray_m</color>
+    <color name="text_home_menu_selected">@color/res_main_color</color>
+
+    <!-- 直播间主播名字颜色 -->
+    <color name="live_username_creater">#ffce6b</color>
+    <!-- 直播间观众名字颜色 -->
+    <color name="live_username_viewer">#ffce6b</color>
+
+    <!-- 直播间主播文字颜色 -->
+    <color name="live_msg_text_creater">@color/white</color>
+    <!-- 直播间观众文字颜色 -->
+    <color name="live_msg_text_viewer">@color/white</color>
+
+    <!-- 直播消息文字颜色 -->
+    <color name="live_msg_title">#ffce6b</color>
+    <!-- 直播消息内容文字颜色 -->
+    <color name="live_msg_content">#bfef80</color>
+
+    <!-- 直播间送礼物动画的描述文字颜色 -->
+    <color name="live_gift_play_content">@color/yellow</color>
+    <!-- 直播间弹幕内容文字颜色 -->
+    <color name="live_pop_msg_content">@color/white</color>
+
+    <!-- 直播间聊天送礼物的描述文字颜色 -->
+    <color name="live_msg_send_gift">#f76776</color>
+
+    <!-- 直播间聊天动画礼物的描述文字颜色 -->
+    <color name="live_msg_send_gift_animator">@color/white</color>
+
+    <!-- 直播消息url链接文字颜色 -->
+    <color name="live_msg_url">@color/yellow</color>
+
+    <!-- 音乐选择 -->
+    <color name="live_song_status_line">#AAAAAA</color>
+    <color name="live_song_status_download_line">#E86E82</color>
+    <color name="live_song_singer_text">#6CC9E6</color>
+    <color name="live_song_download_text">#6CC9E6</color>
+    <color name="live_song_select_text">@color/res_main_color</color>
+
+    <!-- 个人主页LiveUserHomeActivity 直播回放item颜色 -->
+    <color name="live_item_user_home_right_one">#8EE2D2</color>
+    <color name="live_item_user_home_right_two">#2D9884</color>
+    <color name="live_item_user_home_right_three">#C0EE88</color>
+    <color name="live_item_user_home_right_four">#E18EE0</color>
+    <color name="user_home_text_renzheng">#FCE861</color>
+    <color name="user_home_text_gray">#8C8C8C</color>
+    <color name="user_home_text_stroke">#808080</color>
+    <!-- 个人主页LiveUserHomeRightFragment和LiveUserHomeReplayActivity 最新最热 -->
+    <color name="include_live_cont_total_top_bg">#EEF7F4</color>
+
+    <!-- 用户头像LiveUserPhotoActivity -->
+    <color name="bg_photo">#f0f7f6</color>
+
+    <color name="textview_gray">#bbd6d6d6</color>
+    <!--个人中心头像 LiveTabMeFragment-->
+    <!--外圈-->
+    <color name="stroke_head_image">@color/white</color>
+    <!--昵称-->
+    <color name="text_nick_name">@color/white</color>
+    <!--粉丝关注-->
+    <color name="text_fans_focus">#696969</color>
+
+    <!--钱票贡献榜字体颜色LiveContBaseFragment-->
+    <color name="text_cont_item">#555555</color>
+    <color name="text_user_home">#999999</color>
+
+    <!-- 图片加载中的背景颜色 -->
+    <color name="bg_image_loading">#EEEEEE</color>
+    <!--登录页面字体颜色-->
+    <color name="text_login_color">@color/white</color>
+
+    <color name="bg_color_central_member">@color/res_main_color</color>
+    <color name="text_color_central_member">@color/white</color>
+
+    <!-- 普通直播类型直播间背景 -->
+    <color name="bg_live_normal">#7F7F80</color>
+
+    <!-- 选中view颜色 -->
+    <color name="lib_sb_color_checked_view">@color/res_main_color</color>
+    <!-- ViewPager指示器小圆点选中颜色 -->
+    <color name="lib_vpg_indicator_selected">@color/res_main_color</color>
+
+    <!--Add-->
+    <color name="btn_disable">#DFDFDF</color>
+
+    <color name="color_create_room_gray">#bbd6d6d6</color>
+</resources>

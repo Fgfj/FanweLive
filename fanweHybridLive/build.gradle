@@ -1,0 +1,197 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 19100800
+        versionName "2.7.8"
+        multiDexEnabled true
+        ndk {
+            abiFilter 'armeabi-v7a'
+        }
+        flavorDimensions "default"
+    }
+    //签名
+    signingConfigs {
+        jwh {
+            storeFile file("live.jks")
+            storePassword "909090"
+            keyAlias "live2019"
+            keyPassword "909090"
+        }
+        yhy {
+            storeFile file('yhy.jks')
+            storePassword 'Kd2OMxdX'
+            keyAlias = 'key0'
+            keyPassword 'TyQOVDO6'
+        }
+    }
+    productFlavors {
+        mm700 {
+            resValue "string", "app_name", '"妹妹700"'
+            applicationId "com.mm700"
+            buildConfigField "String", "APP_NAME", '"meimeiqibai"'
+            buildConfigField "String", "TIM_APP_ID", '"1400244580"'
+            buildConfigField "String", "UMENG_APP_KEY", '"5d6f4ff14ca35784be000884"'
+            buildConfigField "String", "UMENG_PUSH_SECRET", '"67965ce73dcff9a729514455a1e253f8"'
+            manifestPlaceholders.put("OPENINSTALL_APP_KEY", "zx3ngy")
+            signingConfig signingConfigs.jwh
+        }
+        jwh {
+            resValue "string", "app_name", '"九尾狐"'//名称
+            applicationId "com.b18e.e7de"//包名
+            buildConfigField "String", "APP_NAME", '"jiuweihu"'//域名配置
+            buildConfigField "String", "TIM_APP_ID", '"1400238728"'//腾讯即时通讯APP_ID
+            buildConfigField "String", "UMENG_APP_KEY", '"5d2c4879570df3459600085d"'//友盟APP_KEY
+            buildConfigField "String", "UMENG_PUSH_SECRET", '"353785c0001ef4c774b65e0c643e905c"'
+//友盟推送Secret
+            manifestPlaceholders.put("OPENINSTALL_APP_KEY", "u49mc5")//OpenInstall渠道统计APP_KEY
+            signingConfig signingConfigs.jwh//签名配置
+        }
+        yhy {
+            resValue "string", "app_name", '"怡红院"'
+            applicationId "com.live.yihongy"
+            buildConfigField "String", "APP_NAME", '"yihongy"'
+            buildConfigField "String", "TIM_APP_ID", '"1400246914"'
+            buildConfigField "String", "UMENG_APP_KEY", '"5d6f4fbc3fc1953d99000288"'
+            buildConfigField "String", "UMENG_PUSH_SECRET", '"dfcd53c391caa8f0855ac14bd336d8dd"'
+            manifestPlaceholders.put("OPENINSTALL_APP_KEY", "lu4t34")
+            signingConfig signingConfigs.yhy
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = "${variant.name}_v${variant.versionName}_${variant.versionCode}.apk"
+            }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            zipAlignEnabled false
+            minifyEnabled false
+            signingConfig signingConfigs.jwh
+        }
+        release {
+            debuggable false
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.jwh
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    android {
+        configurations {
+            all*.exclude module: 'PhotoView'  //去除重复依赖库
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'org.xutils:xutils:3.5.0'
+    implementation(name: 'libraryAdapterHttp-release', ext: 'aar')
+    implementation(name: 'libraryPhotoViewMaster-release', ext: 'aar')
+    implementation(name: 'libraryQrcodeZxing-release', ext: 'aar')
+    implementation(name: 'pickerview-release', ext: 'aar')
+    implementation(name: 'TimePickerDialog-release', ext: 'aar')
+    implementation(name: 'libraryIMTencent-release', ext: 'aar')
+    implementation(name: 'LiteAVSDK_Smart_6.3.7089', ext: 'aar')
+    implementation(name: 'libraryPayUnionpay-release', ext: 'aar')
+    implementation(name: 'alipaySdk', ext: 'aar')
+//    implementation(name: 'PushSDK-release', ext: 'aar')
+    // 需要依赖以下第三方库
+    implementation 'com.umeng.umsdk:common:2.0.0'
+    implementation 'com.umeng.umsdk:analytics:8.0.0'
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    implementation 'com.umeng.umsdk:push:6.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    //bilibili弹幕
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.google.android:flexbox:0.2.6'
+    implementation 'com.yalantis:ucrop:2.2.0'
+    implementation project(path: ':libGame')
+//    implementation project(path: ':libApp')
+    //----------com.fanwe.android start----------
+    implementation 'com.github.zj565061763:blocker:1.0.3'
+    implementation 'com.github.zj565061763:cache:1.0.14'
+    implementation 'com.github.zj565061763:dialog:1.0.10'
+    implementation 'com.github.zj565061763:player:1.0.3'
+    implementation 'com.github.zj565061763:pulltorefresh:1.0.33'
+    implementation 'com.github.zj565061763:recorder:1.0.3'
+    implementation 'com.github.zj565061763:select:1.1.3'
+    implementation 'com.github.zj565061763:span:1.0.7'
+    implementation 'com.github.zj565061763:statelayout:1.0.6'
+    implementation 'com.github.zj565061763:switchbutton:1.0.15'
+    implementation 'com.github.zj565061763:viewpager:1.0.18'
+    //----------com.fanwe.android end----------
+    //鲜肉===============================================start
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'zlc.season:rxdownload2:2.0.0-beta4'
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'me.iwf.photopicker:PhotoPicker:0.9.5@aar'
+    implementation 'com.cocosw:bottomsheet:1.0'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'com.scottsu:states-layout:1.1.5'
+    implementation 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
+    //鲜肉===============================================end
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.just.agentweb:agentweb:4.0.2'
+    // (必选)
+    implementation('com.lzy.widget:imagepicker:0.6.1') {
+        exclude group: 'com.github.chrisbanes.photoview', module: 'library'
+    }
+    implementation 'com.alibaba:fastjson:1.2.51'
+    implementation 'com.blankj:utilcode:1.25.9'
+    implementation files('libs/OpenInstall_v2.2.2.jar')
+    implementation project(path: ':faceunity')
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.4.7'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

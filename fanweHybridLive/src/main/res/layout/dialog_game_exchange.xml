@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.fanwe.xianrou.widget.QKDiamondTextView
+        android:id="@+id/tv_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="$余额:0"
+        android:textColor="@color/res_text_gray_l"/>
+
+    <TextView
+        android:id="@+id/tv_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="兑换比例:0.0"
+        android:textColor="@color/res_text_gray_m"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/et_exchange_money"
+        style="@style/res.Edit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/res_layer_white_stroke_corner"
+        android:gravity="center"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tv_exchange_diamonds_coins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:text=""
+        android:textColor="@color/res_text_gray_m"
+        android:textSize="13sp"
+        android:visibility="invisible"/>
+
+</LinearLayout>

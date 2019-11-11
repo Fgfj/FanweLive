@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_s">
+
+        <TextView
+            android:id="@+id/tv_title_xr_dialog_simple_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/margin_s"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/res_text_l"/>
+
+        <TextView
+            android:id="@+id/tv_msg_xr_dialog_simple_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_body"/>
+
+
+        <Button
+            android:id="@+id/btn_confirm_xr_dialog_simple_confirm"
+            android:layout_width="130dp"
+            android:layout_height="@dimen/height_button_s"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_m"
+            android:background="@drawable/res_sel_main_color"
+            android:stateListAnimator="@drawable/xr_selector_card_elevation_s"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_button"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

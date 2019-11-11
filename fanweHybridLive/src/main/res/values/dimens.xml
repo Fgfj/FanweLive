@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- 重写 -->
+    <dimen name="height_title_bar">@dimen/res_height_title_bar</dimen>
+    <dimen name="text_title_bar">@dimen/res_text_title_bar</dimen>
+    <dimen name="text_sub_title_bar">@dimen/res_text_sub_title_bar</dimen>
+
+    <dimen name="width_title_item">@dimen/res_width_title_item</dimen>
+    <dimen name="width_title_item_image">@dimen/res_width_title_item_image</dimen>
+    <dimen name="height_title_item_image">@dimen/res_height_title_item_image</dimen>
+
+
+    <!-- 首页底部菜单栏高度 -->
+    <dimen name="height_live_main_bottom_bar">51dp</dimen>
+
+    <!-- 首页底部菜单栏图片宽度 -->
+    <dimen name="width_live_main_bottom_tab_image">25dp</dimen>
+    <!-- 首页底部菜单栏图片高度 -->
+    <dimen name="height_live_main_bottom_tab_image">25dp</dimen>
+
+    <!-- 直播间底部栏宽度 -->
+    <dimen name="height_live_bottom_bar">55dp</dimen>
+    <!-- 直播间底部菜单宽度 -->
+    <dimen name="width_live_bottom_menu">35dp</dimen>
+    <!-- 直播间底部菜单高度 -->
+    <dimen name="height_live_bottom_menu">45dp</dimen>
+
+    <!-- 直播间底部菜单图标宽度 -->
+    <dimen name="width_live_bottom_menu_image">35dp</dimen>
+    <!-- 直播间底部菜单图标高度 -->
+    <dimen name="height_live_bottom_menu_image">35dp</dimen>
+    <!-- 直播间底部菜单间距 -->
+    <dimen name="margin_live_bottom_menu">5dp</dimen>
+
+    <!-- 直播间观众列表头像宽度 -->
+    <dimen name="width_live_viewer_head_image">30dp</dimen>
+    <!-- 直播间观众列表头像高度 -->
+    <dimen name="height_live_viewer_head_image">30dp</dimen>
+
+    <dimen name="height_live_search_bar">40dp</dimen>
+
+    <dimen name="height_photo_view">10dip</dimen>
+
+    <!-- 指示器间距 -->
+    <dimen name="lib_vpg_indicator_margin">10dp</dimen>
+
+    <!--个人中心和他人个人中心-->
+    <!--向右箭头大小-->
+    <dimen name="width_arrow_right">6dp</dimen>
+    <dimen name="height_arrow_right">11dp</dimen>
+
+    <dimen name="item_live_recharge_rule_min_height">80dp</dimen>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_text_max_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入价格("
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="13sp"/>
+
+        <com.fanwe.xianrou.widget.QKDiamondTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$/场)"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_diamond"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layer_white_stroke_corner"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="9"
+        android:textColor="@color/res_text_gray_m"
+        android:textColorHint="@color/res_text_gray_s"
+        android:textSize="13sp"/>
+
+</LinearLayout>

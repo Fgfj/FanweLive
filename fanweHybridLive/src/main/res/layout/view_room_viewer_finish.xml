@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/res_blur_m"/>
+
+    <com.fanwe.live.view.InterceptTouchEventLinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:text="直播已结束"
+            android:textColor="@color/white"
+            android:textSize="@dimen/res_text_title_bar"/>
+
+        <com.fanwe.library.view.CircleImageView
+            android:id="@+id/civ_head_img"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="40dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"/>
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/res_text_m"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="观看人数"
+                android:textColor="@color/white"
+                android:textSize="@dimen/res_text_s"/>
+
+
+            <TextView
+                android:id="@+id/tv_viewer_number"
+                style="@style/res.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/res_text_l"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/layer_transparent_stroke_second_color_20dp_corner"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="关注"
+            android:textColor="@color/res_second_color"
+            android:textSize="@dimen/res_text_m"/>
+
+        <TextView
+            android:id="@+id/tv_back_home"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/res_layer_transparent_stroke_m_white_corner_l"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="返回首页"
+            android:textColor="@color/white"
+            android:textSize="@dimen/res_text_m"/>
+
+    </com.fanwe.live.view.InterceptTouchEventLinearLayout>
+
+</RelativeLayout>

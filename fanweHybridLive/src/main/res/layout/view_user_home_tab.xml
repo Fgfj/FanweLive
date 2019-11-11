@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="71dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:background="@drawable/layer_white_corner_2dp"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="送出"
+                android:textColor="@color/res_text_gray_m"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_userhome_use_diamond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/res_main_color"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/res_stroke_deep"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_my_focus"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_focus_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="0"
+            android:textColor="@color/res_main_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/res_stroke_deep"/>
+
+    <LinearLayout
+        android:id="@+id/ll_my_fans"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="粉丝"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_fans_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="0"
+            android:textColor="@color/res_main_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

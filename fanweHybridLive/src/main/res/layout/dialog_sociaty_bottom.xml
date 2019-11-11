@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/res_stroke"/>
+    <Button
+        android:id="@+id/btn_watch_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="观看直播"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+    <View
+        android:id="@+id/line_watch_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/res_stroke"/>
+    <Button
+        android:id="@+id/btn_see_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="查看详情"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+    <View
+        android:id="@+id/line_leave_sociaty"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/res_stroke"/>
+    <Button
+        android:id="@+id/btn_leave_sociaty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="踢出公会"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/res_stroke"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#eeeee9"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/res_stroke"/>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="取消"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/res_stroke"/>
+</LinearLayout>

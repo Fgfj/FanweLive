@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:background="@color/transparent">
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_xs"
+        app:matProg_barColor="@color/res_main_color"
+        app:matProg_barWidth="4dp"
+        app:matProg_circleRadius="42dp"
+        app:matProg_progressIndeterminate="true"/>
+
+</com.zhy.android.percent.support.PercentFrameLayout>

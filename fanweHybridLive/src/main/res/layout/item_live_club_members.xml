@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/res_sel_white_gray"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:id="@+id/ll_root">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.fanwe.library.view.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/civ_head_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon"
+            app:civ_border_color="@color/transparent"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/tv_show_live"
+            android:layout_width="45dp"
+            android:layout_height="15dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#6BD20F"
+            android:text="直播中"
+            android:textColor="@color/white"
+            android:textSize="11sp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            style="@style/text_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="6"
+            android:text="伤透猴哥心"
+            android:textColor="@color/res_text_gray_l"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_family"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sociaty"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_global_male"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_global_male" />
+
+        <ImageView
+            android:id="@+id/iv_rank"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/rank_1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_watch_live"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_deep_gree_rectangle_radius"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="观看直播"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"
+            android:textSize="11sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_deep_black_rectangle_radius"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="踢出公会"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</LinearLayout>

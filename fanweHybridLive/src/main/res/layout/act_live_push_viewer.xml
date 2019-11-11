@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_live_normal"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.fanwe.live.view.SDVerticalScollView
+        android:id="@+id/view_vertical_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.fanwe.live.view.SDVerticalScollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.fanwe.live.appview.LiveVideoView
+            android:id="@+id/view_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+        <com.fanwe.live.appview.LiveDanmakuView
+            android:id="@+id/danmaku_view"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <com.fanwe.live.appview.LiveLinkMicGroupView
+            android:id="@+id/view_link_mic_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/rl_root_layout"
+            layout="@layout/include_live_layout_viewer_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_loading_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pay_bg_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+    <!-- 关闭按钮 -->
+    <com.fanwe.live.appview.room.RoomCloseView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/view_full_screen_back"
+        android:layout_width="@dimen/width_live_bottom_menu_image"
+        android:layout_height="@dimen/height_live_bottom_menu_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/selector_user_portrait_back"
+        android:visibility="gone" />
+</RelativeLayout>

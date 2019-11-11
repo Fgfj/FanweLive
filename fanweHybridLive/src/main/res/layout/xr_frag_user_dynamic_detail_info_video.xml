@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="55%w">
+
+        <ImageView
+            android:id="@+id/iv_thumb_video_xr_frag_user_dynamic_detail_info_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:src="@drawable/xr_ic_video_play"
+            app:layout_heightPercent="13%w"
+            app:layout_widthPercent="13%w"/>
+    </com.zhy.android.percent.support.PercentFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_xs">
+
+        <FrameLayout
+            android:layout_width="@dimen/height_user_head_l"
+            android:layout_height="@dimen/height_user_head_l"
+            android:layout_marginRight="@dimen/margin_xs">
+
+            <com.fanwe.library.view.CircleImageView
+                android:id="@+id/iv_user_head_xr_frag_user_dynamic_detail_info_video"
+                android:layout_width="match_parent"
+                tools:src="@drawable/xr_user_head_default_user_center"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/iv_user_authentication_xr_frag_user_dynamic_detail_info_video"
+                android:layout_width="@dimen/height_icon_s"
+                android:layout_height="@dimen/height_icon_s"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/xr_ic_vip"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_dynamic_user_name_xr_frag_user_dynamic_detail_info_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    tools:text="嘎嘎"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_body"/>
+
+                <ImageView
+                    android:layout_width="@dimen/height_icon_s"
+                    android:layout_height="@dimen/height_icon_s"
+                    android:layout_marginLeft="@dimen/base_p_m_15"
+                    android:src="@drawable/xr_ic_video_user_dynamics"/>
+
+                <TextView
+                    android:id="@+id/tv_number_video_watch_xr_frag_user_dynamic_detail_info_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/base_p_m_5"
+                    android:textColor="@color/textColorTertiary"
+                    android:textSize="@dimen/res_text_s"/>
+
+                <com.fanwe.xianrou.widget.varunest.sparkbutton.SparkButton
+                    android:id="@+id/spark_button_favorite_xr_frag_user_dynamic_detail_info_video"
+                    android:layout_width="@dimen/height_icon_s"
+                    android:layout_height="@dimen/height_icon_s"
+                    android:layout_marginLeft="@dimen/base_p_m_15"
+                    app:sparkbutton_activeImage="@drawable/xr_ic_favorite_checked"
+                    app:sparkbutton_iconSize="@dimen/height_icon_s"
+                    app:sparkbutton_inActiveImage="@drawable/xr_ic_favorite_unchecked"
+                    app:sparkbutton_primaryColor="@color/res_main_color"
+                    app:sparkbutton_secondaryColor="@color/color_impact"/>
+
+                <TextView
+                    android:id="@+id/tv_number_favorite_xr_frag_user_dynamic_detail_info_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/base_p_m_5"
+                    android:textColor="@color/textColorTertiary"
+                    android:textSize="@dimen/res_text_s"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_dynamic_description_xr_frag_user_dynamic_detail_info_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="视频简介..."
+                android:paddingTop="@dimen/base_p_m_5"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_caption"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_line_s"
+        android:layout_marginLeft="@dimen/base_p_m_5"
+        android:layout_marginRight="@dimen/base_p_m_5"
+        android:background="@color/divider_line"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container_share_xr_frag_user_dynamic_detail_info_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<string name="app_name">九尾狐</string>-->
+    <!--是否展示星店 小店插件-->
+    <integer name="is_viewer_show_plug">1</integer>
+    <!-- 是否开启竞拍模式 -->
+    <bool name="show_hide_pai_view">false</bool>
+    <!-- 是否直接打开webview MainActivity -->
+    <bool name="is_open_webview_main">false</bool>
+    <!-- 是否显示开播倒计时 -->
+    <bool name="show_create_room_count_down">true</bool>
+    <!-- 是否显示直播间网络速率 -->
+    <bool name="show_live_sdk_info">true</bool>
+    <!--初始化页面延迟毫秒数-->
+    <integer name="init_delayed_time">1</integer>
+    <!--广告页面延迟毫秒数-->
+    <integer name="ad_delayed_time">3000</integer>
+    <!-- 启动页轮播广告是否开启  关闭 false 开启  true  -->
+    <bool name="is_open_adv">false</bool>
+    <!-- drawable-xxdpi 目录中adv_img_命名的轮播广告图片-->
+    <string-array name="adv_img_array">
+        <item>adv_img_1</item>
+        <item>adv_img_2</item>
+        <item>adv_img_3</item>
+    </string-array>
+    <!-- 友盟推送配置 -->
+    <string name="umeng_appkey">5d2c4879570df3459600085d</string>
+    <string name="umeng_message_secret">353785c0001ef4c774b65e0c643e905c</string>
+    <!--腾讯地图key-->
+    <string name="tencent_map_key">36HBZ-Z5XK4-CCMUE-DWKUY-DCJSJ-JIF7M</string>
+    <!-- 微信配置 -->
+    <string name="wx_app_id">wx304c50b56a6606f6</string>
+    <string name="wx_app_secret">1374c42df97f25c826a291ce5ceee619</string>
+    <!-- QQ配置 -->
+    <string name="qq_auth_scheme">tencent1106192640</string>
+    <string name="qq_app_id">1106192640</string>
+    <string name="qq_app_key">NGgZpjGFrpHOtxYg</string>
+    <!-- 新浪配置 -->
+    <string name="sina_app_key">3310867184</string>
+    <string name="sina_app_secret">94ccd4786bdaf1967fb2f4d9b2531ae8</string>
+    <!--腾讯移动直播License-->
+    <string name="tencent_live_licence_url">http://license.vod2.myqcloud.com/license/v1/12b7b853a58d56ef0041f878855eede5/TXLiveSDK.licence</string>
+    <string name="tencent_live_licence_key">dc9ee3909c6da860c78b02f0f52f04e1</string>
+    <!--域名列表-->
+    <string-array name="arr_host">
+        <item>http://xxx.com</item>
+        <!--<item>http://xxx12314345.com</item>-->
+    </string-array>
+
+    <!--appid待填（聚宝付支付）-->
+    <string name="app_id">1</string>
+</resources>

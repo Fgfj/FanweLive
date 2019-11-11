@@ -1,0 +1,26 @@
+gradle.allprojects {
+
+    ext.getGitInfoSuffix = {
+        String result = "";
+        try {
+            File headFile = new File('.git/HEAD');
+            if (headFile.exists()) {
+                String[] strings = headFile.getText('UTF-8').split(" ");
+                if (strings.size() > 1) {
+
+                    String refFilePath = '.git/' + strings[1].replace("\n", "");
+
+                    if (refFilePath.contains("/")) {
+                        String branchName = refFilePath.substring(refFilePath.lastIndexOf("/") + 1);
+                        result += "_" + branchName;
+                    }
+//                    File refFile = new File(refFilePath);
+//                    result += "_" + refFile.getText('UTF-8').substring(0, 7);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}

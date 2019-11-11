@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scottsu.stateslayout.StatesLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/states_layout_xr_act_user_dynamic_detail_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:sl_default_loading_wheel_color="@color/res_main_color">
+
+    <FrameLayout
+        android:id="@+id/fl_container_comment_xr_act_user_dynamic_detail_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/res_height_button"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container_comment_publish_xr_act_user_dynamic_detail_video"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/res_height_button"
+        android:layout_gravity="bottom"/>
+
+
+</com.scottsu.stateslayout.StatesLayout>

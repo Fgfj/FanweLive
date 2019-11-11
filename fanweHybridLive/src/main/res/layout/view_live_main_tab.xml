@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_live_main_bottom_bar"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.fanwe.live.view.LiveTabMainMenuView
+            android:id="@+id/view_tab_live"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="-8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/img"
+                android:layout_marginTop="42dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:text="首页" />
+        </com.fanwe.live.view.LiveTabMainMenuView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+
+        <com.fanwe.live.view.LiveTabMainMenuView
+            android:id="@+id/view_tab_ranking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="-8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/img"
+                android:layout_marginTop="42dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:text="排行" />
+        </com.fanwe.live.view.LiveTabMainMenuView>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_tab_create_live"
+        android:layout_width="@dimen/height_live_main_bottom_bar"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="3dp"
+        android:src="@drawable/ic_create_live"
+        android:stateListAnimator="@drawable/bm_selector_press_scale_out"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <com.fanwe.live.view.LiveTabMainMenuView
+            android:id="@+id/view_tab_small_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="-8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/img"
+                android:layout_marginTop="42dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:text="充值" />
+        </com.fanwe.live.view.LiveTabMainMenuView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <com.fanwe.live.view.LiveTabMainMenuView
+            android:id="@+id/view_tab_me"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="-8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/img"
+                android:layout_marginTop="42dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:text="我的" />
+        </com.fanwe.live.view.LiveTabMainMenuView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white"
+             android:clickable="true"
+             android:focusable="true"
+             android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_xs">
+
+            <FrameLayout
+                android:layout_width="@dimen/height_user_head_user_dynamic"
+                android:layout_height="@dimen/height_user_head_user_dynamic">
+
+                <com.fanwe.library.view.CircleImageView
+                    android:id="@+id/iv_user_head_xr_view_holder_user_dynamic_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/xr_user_head_default_user_center"/>
+
+                <ImageView
+                    android:id="@+id/iv_user_authentication_xr_view_holder_user_dynamic_goods"
+                    android:layout_width="@dimen/height_icon_s"
+                    android:layout_height="@dimen/height_icon_s"
+                    android:layout_gravity="bottom|right"
+                    android:src="@drawable/xr_ic_vip"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_xs">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/base_p_m_10"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_user_name_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/res_text_l"
+                        tools:text="嘎嘎"/>
+
+                    <ImageView
+                        android:id="@+id/iv_stick_top_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/xr_ic_stick_top"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_publish_time_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/base_p_m_5"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/res_text_s"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_content_xr_view_holder_user_dynamic_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/res_text_m"
+                    tools:text="内容内容内容内容内容"/>
+
+                <com.zhy.android.percent.support.PercentFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_thumb_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        app:layout_heightPercent="60%w"
+                        app:layout_widthPercent="60%w">
+                    </ImageView>
+                </com.zhy.android.percent.support.PercentFrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_publish_place_xr_view_holder_user_dynamic_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_xs"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/res_text_s"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_like_num_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="@dimen/height_icon_s"
+                        android:layout_height="@dimen/height_icon_s"
+                        android:src="@drawable/xr_ic_shopping_cart"/>
+
+                    <TextView
+                        android:id="@+id/tv_buy_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/xr_selector_white_gray"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="@dimen/base_p_m_5"
+                        android:text="我要购买"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/res_text_s"/>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <ImageButton
+                        android:id="@+id/imgbtn_more_xr_view_holder_user_dynamic_goods"
+                        android:layout_width="@dimen/height_icon_l"
+                        android:layout_height="@dimen/height_icon_l"
+                        android:layout_marginLeft="@dimen/base_p_m_15"
+                        android:background="@drawable/xr_selector_transparent_gray"
+                        android:src="@drawable/xr_ic_more_horizontal"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_divider_line_s"
+            android:background="@color/divider_line"/>
+    </LinearLayout>
+</FrameLayout>

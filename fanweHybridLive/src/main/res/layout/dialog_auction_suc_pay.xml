@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_goods_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_podcast_order"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_goods_pic"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txv_goods_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="【暴走萝莉家】内蒙古特产天美 华乳奶泡 优质"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center_vertical"
+             android:layout_marginTop="8dp"
+             android:layout_below="@+id/txv_goods_name"
+             android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rel_diamond"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/iv_diamond"
+                        android:layout_width="@dimen/image_diamond_size"
+                        android:layout_height="@dimen/image_diamond_size"
+                        android:src="@drawable/ic_diamond"/>
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/txv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/iv_diamond"
+                        android:text="0"
+                        android:textColor="@color/res_text_gray_l"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txv_surplus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已结束"
+                    android:textColor="@color/res_text_gray_l"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_chongzhi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txv_chongzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值 "
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txv_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txv_chongzhi"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_diamond2"
+                android:layout_width="@dimen/image_diamond_size"
+                android:layout_height="@dimen/image_diamond_size"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/txv_recharge"
+                android:src="@drawable/ic_diamond"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_diamond2"
+                android:src="@drawable/ic_arrow_right_gray"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_main_color_corner_12dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/txv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_main_color_corner_12dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="付款"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</LinearLayout>

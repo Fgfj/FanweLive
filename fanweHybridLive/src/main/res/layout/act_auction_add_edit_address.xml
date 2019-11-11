@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/res_bg_activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="收货人"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="14sp" />
+
+            <com.fanwe.library.customview.ClearEditText
+                android:id="@+id/cet_name"
+                style="@style/res.Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="张三"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/res_text_gray_s"
+                android:textColorHint="@color/res_text_gray_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_stroke_1px"
+            android:background="@color/res_stroke" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="手机号码"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="14sp" />
+
+            <com.fanwe.library.customview.ClearEditText
+                android:id="@+id/cet_phone"
+                style="@style/res.Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="请输入"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/res_text_gray_s"
+                android:textColorHint="@color/res_text_gray_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_stroke_1px"
+            android:background="@color/res_stroke" />
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="省市"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_pcd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="福建省 福州市 鼓楼区"
+                android:textColor="@color/res_text_gray_s"
+                android:textColorHint="@color/res_text_gray_s"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/create_room_position_close" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="定位"
+                    android:textColor="@color/res_main_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_stroke_1px"
+            android:background="@color/res_stroke" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="详细地址"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="14sp" />
+
+            <com.fanwe.library.customview.ClearEditText
+                android:id="@+id/cet_address_detail"
+                style="@style/res.Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="五四路128号"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/res_text_gray_s"
+                android:textColorHint="@color/res_text_gray_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_stroke_1px"
+            android:background="@color/res_stroke" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="设为默认"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="14sp" />
+
+            <com.fanwe.lib.switchbutton.SDSwitchButton
+                android:id="@+id/sb_default"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

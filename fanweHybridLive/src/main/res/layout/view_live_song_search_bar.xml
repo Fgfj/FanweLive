@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/search_et_input"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/live_song_search_edittext_shape"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="请搜索用户名或者ID"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/search_iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/base_p_m_15"
+            android:src="@drawable/ic_edit_clear"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/height_title_bar"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/res_sel_white_gray"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search_white_title"/>
+    </LinearLayout>
+</LinearLayout>

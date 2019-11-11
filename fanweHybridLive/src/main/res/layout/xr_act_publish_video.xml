@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/res_bg_activity"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_change_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_p_m_10"
+            android:layout_marginRight="@dimen/base_p_m_10"
+            android:layout_marginTop="@dimen/base_p_m_10"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/xr_ic_publish_video"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="更改视频"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/base_p_m_10"
+            android:layout_marginRight="@dimen/base_p_m_10"
+            android:layout_marginTop="@dimen/base_p_m_10"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#66240A0B"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="编辑封面"
+                android:textColor="@color/white"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/base_p_m_10"
+            android:layout_marginRight="@dimen/base_p_m_10"
+            android:layout_marginTop="@dimen/base_p_m_10"
+            android:background="@color/res_stroke"/>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_p_m_10"
+            android:layout_marginRight="@dimen/base_p_m_10"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="@string/hint_input_publish_photo_text"
+            android:maxLength="100"
+            android:maxLines="5"
+            android:minLines="5"
+            android:padding="@dimen/base_p_m_5"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="@dimen/res_text_m"/>
+
+        <TextView
+            android:id="@+id/tv_available_input_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/base_p_m_10"
+            android:paddingBottom="@dimen/base_p_m_5"
+            android:paddingTop="@dimen/base_p_m_5"
+            android:text="还可输入100字"
+            android:textColor="@color/res_text_gray_m"
+            android:textSize="@dimen/res_text_s"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/base_p_m_10"
+            android:background="@color/res_stroke"/>
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/base_corner_10"
+                android:text="不显示"
+                android:textColor="@color/res_text_gray_l"
+                android:textSize="@dimen/res_text_l"/>
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_arrow_right_gray"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_publish"
+        style="@style/publish_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/publish_height_button"
+        android:layout_margin="@dimen/base_p_m_10"
+        android:layout_marginTop="@dimen/base_p_m_15"
+        android:text="@string/publish"/>
+</LinearLayout>
