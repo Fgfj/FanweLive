@@ -6,6 +6,15 @@ public class Ad implements Serializable {
     private String image;
     private String url;
     private byte type;
+    private String sort;
+
+    public String getSort() {
+        return sort;
+    }
+
+    public void setSort(String sort) {
+        this.sort = sort;
+    }
 
     public String getImage() {
         return image;

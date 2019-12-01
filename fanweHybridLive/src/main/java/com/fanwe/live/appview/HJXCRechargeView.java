@@ -1,14 +1,19 @@
 package com.fanwe.live.appview;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -16,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
+import com.blankj.utilcode.util.KeyboardUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
@@ -43,6 +49,7 @@ import com.fanwe.live.model.App_rechargeActModel;
 import com.fanwe.live.model.PayItemModel;
 import com.fanwe.live.model.RuleItemModel;
 import com.fanwe.live.view.pulltorefresh.IPullToRefreshViewWrapper;
+import com.fanwe.ytest.DialogUtils;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -98,6 +105,12 @@ public class HJXCRechargeView extends BaseAppView {
      */
     private int mExchangeRate = 1;
 
+    private Dialog mPayIsOpenDialog;//本地验证支付前验证dialog
+    private TextView mPayOpenDialogTitleTx;
+    private TextView mPayOpenDialogCodeEt;
+    private TextView mPayOpenDialogSureTx;
+    private String mPayOpenCode;
+
     public HJXCRechargeView(Context context) {
         super(context);
         init();
@@ -118,6 +131,8 @@ public class HJXCRechargeView extends BaseAppView {
         et_money = findViewById(R.id.et_money);
         tv_money_to_diamonds = findViewById(R.id.tv_money_to_diamonds);
         tv_exchange = findViewById(R.id.tv_exchange);
+
+        intOpenDialog();
 
         initPayment(); //支付方式
         initRule(); //支付金额选项
@@ -143,6 +158,38 @@ public class HJXCRechargeView extends BaseAppView {
         }
     }
 
+    private void intOpenDialog() {
+        View payOpenView = View.inflate(getContext(), R.layout.dialog_pay_opean, null);
+        mPayIsOpenDialog = DialogUtils.getDiyDialog(getActivity(), getContext(), payOpenView, Gravity.TOP, 0.6f);
+        mPayOpenDialogTitleTx = payOpenView.findViewById(R.id.pay_open_dialog_code_title_tx);
+        mPayOpenDialogCodeEt = payOpenView.findViewById(R.id.pay_open_dialog_code_code_et);
+        mPayOpenDialogSureTx = payOpenView.findViewById(R.id.pay_open_dialog_code_sure_tx);
+        TextView mPayOpenDialogCancelTx = payOpenView.findViewById(R.id.pay_open_dialog_code_cancel_tx);
+        mPayOpenDialogSureTx.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(TextUtils.equals(mPayOpenDialogCodeEt.getText().toString(),mPayOpenCode)){
+                    requestPay();
+                    mPayIsOpenDialog.dismiss();
+                }else {
+                    ToastUtils.showLong("验证码错误！请重新输入");
+                }
+            }
+        });
+        mPayOpenDialogCancelTx.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPayIsOpenDialog.dismiss();
+            }
+        });
+        mPayIsOpenDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                KeyboardUtils.hideSoftInput(getActivity());
+            }
+        });
+    }
+    private String mPayIsOpen;
 
     private void initPayment() {
         mAdapterPayment = new LiveRechargePaymentAdapter(null, getActivity());
@@ -159,6 +206,8 @@ public class HJXCRechargeView extends BaseAppView {
                 footerView.setVisibility(visible);
                 if (mPayList != null) {
                     ruleAdapter.replaceData(mPayList.get(index).getRule_list());
+                    Log.d("yz",item.getIs_open());
+                    mPayIsOpen=item.getIs_open();
                 }
             }
         });
@@ -181,12 +230,30 @@ public class HJXCRechargeView extends BaseAppView {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 if (adapter.getItemViewType(position) == RuleItemModel.TYPE_RULE) {
+
+
+
                     mPaymentRuleId = ((RuleItemModel) adapter.getItem(position)).getId();
                     if (!validatePayment()) {
                         return;
                     }
                     mExchangeMoney = 0;
-                    requestPay();
+//                    requestPay();
+
+            Log.d("recharge",((RuleItemModel) adapter.getItem(position)).toString());
+
+
+//                    //fifo---
+                    if(TextUtils.equals(mPayIsOpen,"1")){
+                        //打开弹窗
+                        mPayOpenCode = randomCode();
+                        mPayOpenDialogTitleTx.setText("请输入验证数字:"+ mPayOpenCode);
+                        mPayOpenDialogCodeEt.setText("");
+                        mPayIsOpenDialog.show();
+                    }else {
+                        //支付
+                        requestPay();
+                    }
                 }
             }
         });
@@ -451,5 +518,12 @@ public class HJXCRechargeView extends BaseAppView {
     public void onActivityResumed(Activity activity) {
         super.onActivityResumed(activity);
         requestData();
+    }
+    private String randomCode() {
+        String strRand = "";
+        for (int i = 0; i < 4; i++) {
+            strRand += String.valueOf((int) (Math.random() * 10));
+        }
+       return  strRand;
     }
 }

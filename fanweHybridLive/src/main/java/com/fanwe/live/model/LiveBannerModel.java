@@ -2,6 +2,7 @@ package com.fanwe.live.model;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.text.TextUtils;
 
 import com.fanwe.hybrid.activity.AppWebViewActivity;
@@ -29,16 +30,20 @@ public class LiveBannerModel implements Serializable
         }
         Intent intent = null;
         //根据type 做不同跳转
-        switch (type)
-        {
-            case 0:
-                intent = new Intent(activity, AdImgWebViewActivity.class);
-                intent.putExtra(AppWebViewActivity.EXTRA_URL, url);
-                break;
-            case 2:
-                intent = new Intent(activity, LiveRankingActivity.class);
-            default:
-                break;
+//        switch (type)
+//        {
+//            case 0:
+//                intent = new Intent(activity, AdImgWebViewActivity.class);
+//                intent.putExtra(AppWebViewActivity.EXTRA_URL, url);
+//                break;
+//            case 2:
+//                intent = new Intent(activity, LiveRankingActivity.class);
+//            default:
+//                break;
+//        }
+        if(!TextUtils.isEmpty(url)){
+            intent=new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
         }
 
         return intent;

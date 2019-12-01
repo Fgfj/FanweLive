@@ -79,6 +79,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.fanwe.ytest.yTestActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <!-- H5页面Start==================================== -->
         <!-- 广告轮播页面 -->
         <activity

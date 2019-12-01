@@ -30,7 +30,12 @@ public class InitActivity extends BaseActivity implements PermissionUtils.Simple
         setContentView(R.layout.act_init);
         mInitBusiness = new InitBusiness();
         SPUtils.getInstance().put("show_home_ad", true);
-        requestPermissions();
+//        requestPermissions();
+
+        /**
+         * 尝试直接进入app不申请
+         */
+        onGranted();
     }
 
     private void requestPermissions() {

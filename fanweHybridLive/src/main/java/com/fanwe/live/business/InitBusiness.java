@@ -3,6 +3,7 @@ package com.fanwe.live.business;
 import android.app.Activity;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import com.alibaba.fastjson.JSON;

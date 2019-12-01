@@ -17,7 +17,15 @@ public class PayItemModel implements SDSelectManager.Selectable
     private String topText;
     private String bottomText;
     private String complaintText;
+    private String is_open;//新增是否开启验证支付随机码dialog
 
+    public String getIs_open() {
+        return is_open;
+    }
+
+    public void setIs_open(String is_open) {
+        this.is_open = is_open;
+    }
     //add
     private List<RuleItemModel> rule_list;
 

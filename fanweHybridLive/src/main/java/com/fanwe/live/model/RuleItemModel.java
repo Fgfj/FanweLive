@@ -18,11 +18,14 @@ public class RuleItemModel implements MultiItemEntity {
     private int gift_coins;
     private String money_name; //金额格式化
 
+
     // add
     private String gift_coins_des;
     private String day_num;//购买会员天数
     private boolean is_other_money;//是否是其他金额按钮
     private List<Contact> contact;
+
+
 
     public int getGift_coins() {
         return gift_coins;

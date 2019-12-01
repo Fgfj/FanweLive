@@ -191,11 +191,19 @@ public class LiveMainHomeView extends BaseAppView {
             dialog.findViewById(R.id.tv_close).setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    dialog.dismiss();
+                    if(dialogTimeIsOver){
+                        dialog.dismiss();
+                    }
+
                 }
             });
             if (indexActModel.getFullscreenad().getType() > 0) {
                 dismissTimer = new DismissTimer(indexActModel.getFullscreenad().getType() * 1000L, 1000, dialog);
+                if(TextUtils.equals(indexActModel.getFullscreenad().getSort(),"1")){
+                    dialogTimeIsOver=false;
+                }else {
+                    dialogTimeIsOver=true;
+                }
                 dismissTimer.start();
             }
         }
@@ -203,6 +211,7 @@ public class LiveMainHomeView extends BaseAppView {
     }
 
     private DismissTimer dismissTimer;
+    private boolean dialogTimeIsOver;
 
     class DismissTimer extends CountDownTimer {
         private AlertDialog dialog;
@@ -220,6 +229,7 @@ public class LiveMainHomeView extends BaseAppView {
 
         @Override
         public void onFinish() {
+            dialogTimeIsOver=true;
             if (dialog != null && dialog.isShowing()) {
                 dialog.dismiss();
             }
