@@ -26,6 +26,9 @@ public class Constant
          */
         public static final String BAOFOO = "baofoo";
 
+
+        public static final String ALiFPay2="Alif2fpay";
+
         /**
          * 支付宝SDK
          */

@@ -2,9 +2,13 @@ package com.fanwe.hybrid.common;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.ViewGroup;
 
+import com.fanwe.hybrid.activity.AppWebViewActivity;
 import com.fanwe.hybrid.constant.Constant;
 import com.fanwe.hybrid.listner.PayResultListner;
 import com.fanwe.hybrid.model.BfappModel;
@@ -20,8 +24,12 @@ import com.fanwe.library.pay.alipay.PayResult;
 import com.fanwe.library.pay.alipay.SDAlipayer;
 import com.fanwe.library.utils.SDToast;
 import com.fanwe.live.activity.LivePayWebViewActivity;
+import com.fanwe.live.activity.LiveWebViewActivity;
+import com.fanwe.live.appview.H5AppViewWeb;
+import com.fanwe.live.common.AppRuntimeWorker;
 import com.fanwe.live.model.App_payActModel;
 import com.fanwe.live.model.PayModel;
+import com.fanwe.ytest.WebViewActivity;
 import com.switfpass.pay.MainApplication;
 import com.switfpass.pay.activity.PayPlugin;
 import com.switfpass.pay.bean.RequestMsg;
@@ -462,6 +470,10 @@ public class CommonOpenSDK {
 //                        CommonOpenSDK.payJBF(paySdkModel,activity,jbfPayResultListener);
                     } else if (Constant.PaymentType.JBFWXPAY.equalsIgnoreCase(payCode)) {
 //                        CommonOpenSDK.payJBF(paySdkModel,activity,jbfPayResultListener);
+                    }else if(Constant.PaymentType.ALiFPay2.equalsIgnoreCase(payCode)){
+                        Log.d("yz",paySdkModel.toString());
+                        Log.d("yz",paySdkModel.getConfig().get("qr_code").toString());
+                        CommonOpenSDK.toAliPay2(paySdkModel,activity);
                     }
                 } else {
                     SDToast.showToast("参数错误:payCode为空");
@@ -472,6 +484,18 @@ public class CommonOpenSDK {
         } else {
             SDToast.showToast("参数错误:pay为空");
         }
+    }
+    public static void toAliPay2(PaySdkModel actModel,Activity activity){
+
+//        Uri uri = Uri.parse(actModel.getConfig().get("qr_code").toString());
+//        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//            // 网址正确 跳转成功
+//        activity.startActivity(intent);
+
+        Intent intent = new Intent(activity, WebViewActivity.class);
+        intent.putExtra(WebViewActivity.EXTRA_URL,actModel.getConfig().get("qr_code").toString());
+        activity.startActivity(intent);
+
     }
 
     public static void openPayWap(@NonNull YJWAPPayModel model, Activity activity) {

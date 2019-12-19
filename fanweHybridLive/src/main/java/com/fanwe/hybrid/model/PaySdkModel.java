@@ -75,4 +75,11 @@ public class PaySdkModel extends BaseActModel
 		this.config = config;
 	}
 
+	@Override
+	public String toString() {
+		return "PaySdkModel{" +
+				"pay_sdk_type='" + pay_sdk_type + '\'' +
+				", config=" + config +
+				'}';
+	}
 }
