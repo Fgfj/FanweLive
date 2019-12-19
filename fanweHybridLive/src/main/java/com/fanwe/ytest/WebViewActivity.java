@@ -102,7 +102,6 @@ public class WebViewActivity  extends BaseActivity {
         if(!TextUtils.isEmpty(mUrl)){
             mWebView.loadUrl(mUrl);
             Log.d("yz",mUrl);
-            ToastUtils.showLong("加载："+mUrl);
             mWebView.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_INSET);//滚动条风格
         }
 
