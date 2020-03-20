@@ -20,6 +20,17 @@ public class PaySdkModel extends BaseActModel
 
 	private Map<String, Object> config;
 
+
+	public String getErrormsg() {
+		return errormsg;
+	}
+
+	public void setErrormsg(String errormsg) {
+		this.errormsg = errormsg;
+	}
+
+	private String errormsg;
+
 	public String getPay_sdk_type()
 	{
 		return pay_sdk_type;
@@ -80,6 +91,7 @@ public class PaySdkModel extends BaseActModel
 		return "PaySdkModel{" +
 				"pay_sdk_type='" + pay_sdk_type + '\'' +
 				", config=" + config +
-				'}';
+				", errormsg='" + errormsg + '\'' +
+				'}'+status;
 	}
 }

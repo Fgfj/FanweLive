@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.ViewGroup;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.fanwe.hybrid.activity.AppWebViewActivity;
 import com.fanwe.hybrid.constant.Constant;
 import com.fanwe.hybrid.listner.PayResultListner;
@@ -105,6 +106,8 @@ public class CommonOpenSDK {
      */
     public static void payAlipay(PaySdkModel model, final Activity activity, final PayResultListner listner) {
         if (model == null) {
+
+            ToastUtils.showLong("model为null");
             return;
         }
         MalipayModel mainpayModel = model.getMalipay();
@@ -143,9 +146,9 @@ public class CommonOpenSDK {
             @Override
             public void onResult(PayResult result)
             {
+
                 String info = result.getMemo();
                 String status = result.getResultStatus();
-
                 if ("9000".equals(status)) // 支付成功
                 {
                     SDToast.showToast("支付成功");
@@ -451,6 +454,7 @@ public class CommonOpenSDK {
             }
 
             PaySdkModel paySdkModel = payModel.getSdk_code();
+            Log.d("yz",paySdkModel.toString());
             if (paySdkModel != null) {
                 String payCode = paySdkModel.getPay_sdk_type();
                 if (!TextUtils.isEmpty(payCode)) {
@@ -471,9 +475,12 @@ public class CommonOpenSDK {
                     } else if (Constant.PaymentType.JBFWXPAY.equalsIgnoreCase(payCode)) {
 //                        CommonOpenSDK.payJBF(paySdkModel,activity,jbfPayResultListener);
                     }else if(Constant.PaymentType.ALiFPay2.equalsIgnoreCase(payCode)){
-                        Log.d("yz",paySdkModel.toString());
-                        Log.d("yz",paySdkModel.getConfig().get("qr_code").toString());
-                        CommonOpenSDK.toAliPay2(paySdkModel,activity);
+                        if(paySdkModel.getStatus()==1){
+                            CommonOpenSDK.toAliPay2(paySdkModel,activity);
+                        }else {
+                            ToastUtils.showLong(paySdkModel.getErrormsg());
+                        }
+
                     }
                 } else {
                     SDToast.showToast("参数错误:payCode为空");

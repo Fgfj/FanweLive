@@ -90,6 +90,7 @@ public class RoomViewerBottomView extends RoomBottomView implements BankerBusine
         menu_full_screen.setImageResId(R.drawable.ic_live_bottom_full_screen);
         //私聊消息
         menu_private_msg.setImageResId(R.drawable.ic_live_bottom_msg);
+        menu_private_msg.setVisibility(INVISIBLE);
         //分享
         menu_share.setImageResId(R.drawable.ic_live_bottom_share);
         //连麦

@@ -9,11 +9,13 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
 import com.fanwe.hybrid.dao.InitActModelDao;
@@ -262,6 +264,9 @@ public class LiveMainHomeView extends BaseAppView {
                     initTabsData(list);
                     initViewPagerIndicator();
                     initViewPager();
+
+                    SPUtils.getInstance().put("live_pay_recharge", actModel.getLive_pay_recharge());
+//                    SPUtils.getInstance().put("live_pay_recharge", 0);
                 }
             }
 

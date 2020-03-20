@@ -7,7 +7,10 @@ package com.fanwe.library.pay.alipay;
 
 import android.app.Activity;
 import android.text.TextUtils;
+import android.util.Log;
+
 import com.alipay.sdk.app.PayTask;
+import com.blankj.utilcode.util.ToastUtils;
 
 public class SDAlipayer {
     private Activity mActivity;
@@ -32,13 +35,18 @@ public class SDAlipayer {
     public void pay(String orderSpec, String sign, String signType) {
         if (TextUtils.isEmpty(orderSpec)) {
             this.notifyFailure((Exception)null, "order_spec为空");
+            ToastUtils.showLong("order_spec为空");
         } else if (TextUtils.isEmpty(sign)) {
             this.notifyFailure((Exception)null, "sign为空");
+            ToastUtils.showLong("sign为空");
         } else if (TextUtils.isEmpty(signType)) {
             this.notifyFailure((Exception)null, "signType为空");
+
+            ToastUtils.showLong("signType为空");
         } else {
             String info = orderSpec + "&sign=" + "\"" + sign + "\"" + "&" + "sign_type=" + "\"" + signType + "\"";
             this.pay(info);
+
         }
     }
 
@@ -50,6 +58,7 @@ public class SDAlipayer {
                     PayTask alipay = new PayTask(SDAlipayer.this.mActivity);
                     String result = alipay.pay(payInfo, true);
                     SDAlipayer.this.notifyResult(new PayResult(result));
+                    Log.d("yuzhou",alipay.getVersion()+"----version");
                 } catch (Exception var3) {
                     SDAlipayer.this.notifyFailure(var3, (String)null);
                 }

@@ -1,6 +1,7 @@
 package com.fanwe.live.appview.main;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,20 +10,28 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SPUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.fanwe.hybrid.dao.InitActModelDao;
+import com.fanwe.hybrid.event.EExitApp;
 import com.fanwe.hybrid.event.EHomeAdLoaded;
 import com.fanwe.hybrid.http.AppRequestCallback;
 import com.fanwe.hybrid.model.InitActModel;
+import com.fanwe.hybrid.utils.IntentUtil;
 import com.fanwe.library.adapter.http.model.SDResponse;
 import com.fanwe.library.common.SDHandlerManager;
 import com.fanwe.library.model.SDTaskRunnable;
 import com.fanwe.library.utils.SDCollectionUtil;
+import com.fanwe.library.utils.SDPackageUtil;
 import com.fanwe.library.utils.SDToast;
 import com.fanwe.live.R;
 import com.fanwe.live.activity.LiveRankingActivity;
@@ -37,8 +46,17 @@ import com.fanwe.live.model.LiveFilterModel;
 import com.fanwe.live.model.LiveRoomModel;
 import com.fanwe.live.utils.GlideUtil;
 import com.fanwe.live.view.pulltorefresh.IPullToRefreshViewWrapper;
+import com.fanwe.ytest.DialogUtils;
+import com.fanwe.ytest.UpdateUrlEvent;
+import com.fanwe.ytest.UrlTxtInfo;
+import com.fanwe.ytest.WebViewActivity;
+import com.google.gson.JsonObject;
 import com.sunday.eventbus.SDEventManager;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -82,6 +100,7 @@ public class LiveTabHotNewView extends LiveTabBaseView implements BGABanner.Adap
     private int mSex;
     private String mCity;
     private Timer timer = new Timer();
+    private boolean isShow=true;
 
     private void init() {
 
@@ -115,6 +134,42 @@ public class LiveTabHotNewView extends LiveTabBaseView implements BGABanner.Adap
         InitActModel initActModel = InitActModelDao.query();
         if (initActModel != null)
             timer.schedule(loopTask, 0, initActModel.getMonitorResident() * 1000);
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                String s = UrlTxtInfo.pareUrl("http://up.jumenggu.com/update.txt");
+
+                if(s==null){
+                    return;
+                }
+                try {
+                    JSONArray jsonArray = new JSONArray(s);
+                    int localVersion = SDPackageUtil.getCurrentPackageInfo().versionCode;
+                    String apkName = getContext().getResources().getString(R.string.app_name) + "_" + localVersion + ".apk";
+                    for(int i=0;i<jsonArray.length();i++){
+                        String name = (String) jsonArray.getJSONObject(i).get("name");
+                        int serverVersion = (int) jsonArray.getJSONObject(i).get("version");
+                        String content = (String) jsonArray.getJSONObject(i).get("content");
+                        String url = (String) jsonArray.getJSONObject(i).get("url");
+//                        if(TextUtils.equals(name,apkName)){
+//                        if(TextUtils.equals(name,"xinxin22")){
+                        if(TextUtils.equals(name,SDPackageUtil.getPackageName())){
+                            if(serverVersion > localVersion){
+                                SDEventManager.post(new UpdateUrlEvent(content,url));
+                            }
+
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Log.d("update","--"+s);
+            }
+        }).start();
+
     }
 
     /**
@@ -197,7 +252,9 @@ public class LiveTabHotNewView extends LiveTabBaseView implements BGABanner.Adap
             timer.cancel();
             loopTask.cancel();
             loopTask.cancel();
+            isShow=false;
         } else if (visibility == VISIBLE) {
+            isShow=true;
             InitActModel initActModel = InitActModelDao.query();
             if (System.currentTimeMillis() > SPUtils.getInstance().getLong("last_request_time") + initActModel.getMonitorGetInto() * 1000) {
                 requestData();
@@ -230,6 +287,33 @@ public class LiveTabHotNewView extends LiveTabBaseView implements BGABanner.Adap
 //        startLoopRunnable();
     }
 
+    public void onEventMainThread(final UpdateUrlEvent event) {
+        View payOpenView = View.inflate(getContext(), R.layout.dialog_pay_opean, null);
+        Dialog mDialog = DialogUtils.getDiyDialog(getActivity(), getContext(), payOpenView, Gravity.CENTER, 0.6f);
+        mDialog.setCanceledOnTouchOutside(false);
+        EditText editText=payOpenView.findViewById(R.id.pay_open_dialog_code_code_et);
+        editText.setVisibility(GONE);
+        TextView mtitle=payOpenView.findViewById(R.id.pay_open_dialog_code_title_tx);
+        mtitle.setText(event.getContent());
+        TextView mSure=payOpenView.findViewById(R.id.pay_open_dialog_code_sure_tx);
+        mSure.setText("跟新");
+        TextView mclose=payOpenView.findViewById(R.id.pay_open_dialog_code_cancel_tx);
+        mclose.setText("关闭");
+        mclose.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
+            }
+        });
+        mSure.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_open_type = IntentUtil.showHTML(event.getUrl());
+                getActivity().startActivity(intent_open_type);
+            }
+        });
+        mDialog.show();
+    }
     @Override
     protected void onLoopRun() {
         requestData();
@@ -239,7 +323,10 @@ public class LiveTabHotNewView extends LiveTabBaseView implements BGABanner.Adap
      * 请求热门首页接口
      */
     private void requestData() {
-
+        if(!isShow){
+            Log.d("isShow","not show");
+            return;
+        }
 //        CommonInterface.requestLnvitationAward(new AppRequestCallback<LiveLnvitationAwardModel>() {
 //            @Override
 //            protected void onSuccess(SDResponse sdResponse) {

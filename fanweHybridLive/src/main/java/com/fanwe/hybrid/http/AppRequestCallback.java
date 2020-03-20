@@ -54,6 +54,7 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
      * @param resp
      */
     private void dealResponseData(SDResponse resp) {
+        Log.d("yuzhou",resp.getResult()+"---"+resp.getDecryptedResult()+"----"+resp.getHttpCode()+"---"+resp.getThrowable());
         //先获取已解密的字符串
         String decryptedResult = resp.getDecryptedResult();
 
@@ -83,6 +84,7 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
      */
     private String decryptData(String data) {
         String key = ApkConstant.getAeskeyHttp();
+        Log.d("yuzhou",key);
         String decryptedData = AESUtil.decrypt(data, key);
         if (TextUtils.isEmpty(decryptedData)) {
             //如果解密失败，尝试用打包配置的key解密，并清空已保存的key
@@ -93,7 +95,7 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
             LiveUtils.updateAeskey(true, null);
             Log.e(TAG, "----------decryptData error");
         }
-
+        Log.d("AppHttpresult",decryptedData);
         return decryptedData;
     }
 
@@ -173,6 +175,7 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
         resp.getThrowable().printStackTrace();
         CommonInterface.reportErrorLog(errorLog);
         LogUtils.e(errorLog);
+        Log.d("yz",errorLog);
         if (ApkConstant.DEBUG) {
             SDToast.showToast(errorLog);
         }

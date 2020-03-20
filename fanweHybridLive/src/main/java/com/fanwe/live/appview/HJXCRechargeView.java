@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
+import com.alipay.sdk.app.PayTask;
 import com.blankj.utilcode.util.KeyboardUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -440,6 +441,7 @@ public class HJXCRechargeView extends BaseAppView {
         }
 
         requestPay();
+
     }
 
     private void requestPay() {
@@ -453,12 +455,14 @@ public class HJXCRechargeView extends BaseAppView {
             @Override
             protected void onFinish(SDResponse resp) {
                 super.onFinish(resp);
+                Log.d("yz","onfinx");
                 dismissProgressDialog();
             }
 
             @Override
             protected void onSuccess(SDResponse resp) {
                 if (actModel.isOk()) {
+                    Log.d("yz","actModelisOk");
                     CommonOpenSDK.dealPayRequestSuccess(actModel, getActivity(), payResultListner);
                 }
             }

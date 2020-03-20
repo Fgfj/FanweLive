@@ -10,11 +10,12 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 19113000
-        versionName "2.7.9"
+        versionCode 20022100
+        versionName "2.8.5"
         multiDexEnabled true
         ndk {
             abiFilter 'armeabi-v7a'
+//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
         }
         flavorDimensions "default"
     }
@@ -56,10 +57,13 @@ android {
             signingConfig signingConfigs.jwh//签名配置
         }
         yhy {
-            resValue "string", "app_name", '"怡红院"'
+//            resValue "string", "app_name", '"怡红院"'
+//            resValue "string", "app_name", '"百花香"'
+            resValue "string", "app_name", '"幽梦"'
             applicationId "com.live.yihongy"
             buildConfigField "String", "APP_NAME", '"yihongy"'
-            buildConfigField "String", "TIM_APP_ID", '"1400246914"'
+//            buildConfigField "String", "TIM_APP_ID", '"1400246914"'
+            buildConfigField "String", "TIM_APP_ID", '"1400308611"'
             buildConfigField "String", "UMENG_APP_KEY", '"5d6f4fbc3fc1953d99000288"'
             buildConfigField "String", "UMENG_PUSH_SECRET", '"dfcd53c391caa8f0855ac14bd336d8dd"'
             manifestPlaceholders.put("OPENINSTALL_APP_KEY", "lu4t34")

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="yspinner_list">
+                <item>请选择</item>
+                <item>测试工程师</item>
+                <item>产品工程师</item>
+                <item>开发工程师</item>
+                <item>设计工程师</item>
+                <item>运维工程师</item>
+            </string-array>
+
+
+</resources>

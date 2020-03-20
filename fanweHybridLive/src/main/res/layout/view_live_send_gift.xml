@@ -54,7 +54,7 @@
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="13dp"
-                    android:src="@drawable/ic_diamond"/>
+                    android:background="@drawable/ic_diamond"/>
 
                 <TextView
                     android:id="@+id/tv_diamonds"
@@ -67,10 +67,10 @@
                     android:textSize="@dimen/res_text_s"/>
 
                 <ImageView
+                    android:id="@+id/ll_charge_img"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_charge"/>
+                    android:layout_marginLeft="10dp"/>
             </LinearLayout>
 
             <View

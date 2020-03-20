@@ -149,7 +149,7 @@ public class LiveCreateRoomActivity extends BaseActivity implements PermissionUt
     }
 
     private void checkPermission() {
-        PermissionUtils.permission(PermissionConstants.CAMERA, PermissionConstants.MICROPHONE)
+        PermissionUtils.permission(PermissionConstants.CAMERA, PermissionConstants.MICROPHONE,PermissionConstants.STORAGE)
                 .callback(this)
                 .request();
     }

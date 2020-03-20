@@ -56,6 +56,7 @@ import com.fanwe.live.view.pulltorefresh.IPullToRefreshViewWrapper;
 import com.fanwe.o2o.activity.O2OShoppingMystoreActivity;
 import com.fanwe.pay.activity.PayBalanceActivity;
 import com.fanwe.shop.activity.ShopMyStoreActivity;
+import com.fanwe.ytest.yTestActivity;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
@@ -891,7 +892,9 @@ public class LiveMainMeView extends BaseAppView {
      * 设置
      */
     private void clickSetting() {
-        Intent intent = new Intent(getActivity(), LiveUserSettingActivity.class);
+//        Intent intent = new Intent(getActivity(), LiveUserSettingActivity.class);
+//        getActivity().startActivity(intent);
+        Intent intent = new Intent(getActivity(), yTestActivity.class);
         getActivity().startActivity(intent);
     }
 

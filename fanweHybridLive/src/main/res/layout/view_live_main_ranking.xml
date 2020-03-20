@@ -52,6 +52,7 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:visibility="invisible"
             android:id="@+id/ll_chat"
             android:layout_width="50dp"
             android:layout_height="match_parent"

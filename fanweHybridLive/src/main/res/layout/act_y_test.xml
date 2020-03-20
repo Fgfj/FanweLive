@@ -3,11 +3,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/y_test"
-        android:text="asdasd"
+        android:scrollbars="vertical"
+        android:maxLines="10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/yet"
+        android:hint="输入群组id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/yret"
+        android:hint="输入对应人的id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+      <Spinner
+    android:id="@+id/ysp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/ybtn"
+        android:text="发送给群组消息"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/yrbtn"
+        android:text="发送给单人消息"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

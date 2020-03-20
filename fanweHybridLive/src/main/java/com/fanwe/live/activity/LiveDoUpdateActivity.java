@@ -279,6 +279,8 @@ public class LiveDoUpdateActivity extends BaseTitleActivity {
                     UserModel user = actModel.getUser_info();
                     if (user != null) {
                         if (UserModel.dealLoginSuccess(user, true)) {
+                            OpenInstall.reportRegister();
+                            Log.d("yMoney","OpenInstall.reportRegister");
                             InitBusiness.finishLoginActivity();
                             InitBusiness.finishMobileRegisterActivity();
                             InitBusiness.startMainActivity(LiveDoUpdateActivity.this);

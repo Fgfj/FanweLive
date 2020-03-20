@@ -2,11 +2,18 @@ package com.fanwe.live.appview;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
+import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.SPUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.fanwe.hybrid.http.AppRequestCallback;
 import com.fanwe.lib.blocker.SDDurationBlocker;
 import com.fanwe.library.adapter.http.model.SDResponse;
@@ -77,6 +84,7 @@ public class LiveSendGiftView extends BaseAppView implements ILivePrivateChatMor
     private TextView tv_continue_number;
     private TextView tv_count_down_number;
 
+    private ImageView ll_charge_img;
     private LiveGiftAdapter mAdapterGift;
 
     private ISDLooper mLooper = new SDSimpleLooper();
@@ -114,6 +122,8 @@ public class LiveSendGiftView extends BaseAppView implements ILivePrivateChatMor
         view_pager_indicator = (PagerIndicator) findViewById(R.id.view_pager_indicator);
 
         ll_charge = findViewById(R.id.ll_charge);
+
+        ll_charge_img=findViewById(R.id.ll_charge_img);
         tv_diamonds = (TextView) findViewById(R.id.tv_diamonds);
         tv_send = (TextView) findViewById(R.id.tv_send);
         view_continue_send = findViewById(R.id.view_continue_send);
@@ -123,6 +133,12 @@ public class LiveSendGiftView extends BaseAppView implements ILivePrivateChatMor
 
         register();
         bindUserData();
+
+        if(SPUtils.getInstance().getInt("live_pay_recharge")==1){
+            ll_charge_img.setImageDrawable(getResources().getDrawable(R.drawable.ic_live_add_viewer));
+        }else {
+            ll_charge_img.setImageDrawable(getResources().getDrawable(R.drawable.ic_charge));
+        }
     }
 
     private void register()
@@ -304,8 +320,13 @@ public class LiveSendGiftView extends BaseAppView implements ILivePrivateChatMor
 
     protected void clickCharge()
     {
-        LiveRechargeDialog dialog = new LiveRechargeDialog(getActivity());
-        dialog.showCenter();
+        Log.d("yuzhou",SPUtils.getInstance().getInt("live_pay_recharge")+"----");
+        if(SPUtils.getInstance().getInt("live_pay_recharge")!=1){
+            Log.d("yuzhou","ssss");
+            LiveRechargeDialog dialog = new LiveRechargeDialog(getActivity());
+            dialog.showCenter();
+        }
+
     }
 
     private void resetClick()
